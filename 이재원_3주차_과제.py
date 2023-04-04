@@ -50,8 +50,27 @@ def dice(a, b, c):
     else:
         prize=int(max(a,b,c))*100
     return prize
-print(dice(6,2,5))
+
 # 5번
 def alarm(time):
-    # your code
-    return
+    if 60>time>=0:
+        t=time-45
+        if t<0:
+            t="23"+"시"+" "+str(60+t)+"분"
+        else:
+            "0시"+" "+str(t)+"분"
+    elif 1000>time>=100:
+        t=time-((time//100)*100)-45
+        if t<0:
+            t=str((time//100)-1)+"시"+" "+str(60+t)+"분"
+        else:
+            t=str(time//100)+"시"+" "+str(t)+"분"
+    elif time>=1000:
+        t=time-((time//100)*100)-45
+        if t<0:
+            t=str((time//100)-1)+"시"+" "+str(60+t)+"분"
+        else:
+            t=str(time//100)+"시"+" "+str(t)+"분"
+    return t
+
+print(leapYear(2024))
