@@ -37,6 +37,7 @@ def pascal(n):
 def beerRefrigerator(n):
     x=float('inf')
     y=None
+
     for a in range(1, n+1):
         for b in range(a, n//a+1):
             if n%(a*b)==0:
@@ -46,6 +47,7 @@ def beerRefrigerator(n):
                 if z<x:
                     x=z
                     y=(f"{a} X {b} X {c}")
+    
     return y
 
 # 4번
@@ -65,3 +67,7 @@ def matrixMul(mat1, mat2):
         mat3.append(mat) 
         mat=[]            
     return mat3
+
+a= [[1,2], [3,4], [5,6]]
+b=[[-1,-2,0], [0,0,3]]
+print(matrixMul(a,b))
