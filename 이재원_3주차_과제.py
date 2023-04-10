@@ -72,5 +72,3 @@ def alarm(time):
         else:
             t=str(time//100)+"시"+" "+str(t)+"분"
     return t
-
-print(leapYear(2024))
